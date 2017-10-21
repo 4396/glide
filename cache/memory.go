@@ -3,7 +3,7 @@ package cache
 import (
 	"sync"
 
-	"github.com/Masterminds/glide/msg"
+	"github.com/4396/glide/msg"
 	"github.com/Masterminds/semver"
 )
 

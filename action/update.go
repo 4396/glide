@@ -4,11 +4,11 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"github.com/Masterminds/glide/cache"
-	"github.com/Masterminds/glide/cfg"
-	"github.com/Masterminds/glide/msg"
-	gpath "github.com/Masterminds/glide/path"
-	"github.com/Masterminds/glide/repo"
+	"github.com/4396/glide/cache"
+	"github.com/4396/glide/cfg"
+	"github.com/4396/glide/msg"
+	gpath "github.com/4396/glide/path"
+	"github.com/4396/glide/repo"
 )
 
 // Update updates repos and the lock file from the main glide yaml.
