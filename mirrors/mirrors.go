@@ -26,11 +26,17 @@ type mirror struct {
 // - vcs type
 func Get(k string) (bool, string, string) {
 	o, f := mirrors[k]
-	if !f {
-		return false, "", ""
+	if f {
+		return true, o.Repo, o.Vcs
 	}
 
-	return true, o.Repo, o.Vcs
+	for ori, m := range mirrors {
+		if filepath.HasPrefix(k, ori+"/") {
+			return true, m.Repo, m.Vcs
+		}
+	}
+
+	return false, "", ""
 }
 
 // Load pulls the mirrors into memory
